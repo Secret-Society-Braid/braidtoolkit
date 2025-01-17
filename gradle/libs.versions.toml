@@ -1,0 +1,20 @@
+[versions]
+junit = "5.11.4"
+
+[libraries]
+logback = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.16" }
+lombok = { group = "org.projectlombok", name = "lombok", version = "1.18.36" }
+jsr = { group = "com.github.spotbugs", name = "spotbugs-annotations", version = "4.9.0" }
+jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
+jupiter-engine = { group = "org.junit.platform", name = "junit-platform-launcher", version = "unspecified" }
+truth = { group = "com.google.truth", name = "truth", version = "1.4.4" }
+mockito = { group = "org.mockito", name = "mockito-core", version = "4.2.0" }
+
+[bundles]
+tests = [ "jupiter-api", "truth", "mockito" ]
+annotations = [ "lombok", "jsr" ]
+
+[plugins]
+jlink = { id = "org.beryx.jlink", version = "3.1.1" }
+moduleplugin = { id = "org.javamodularity.moduleplugin", version = "1.8.15" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
