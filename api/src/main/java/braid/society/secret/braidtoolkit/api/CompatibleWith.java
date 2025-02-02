@@ -3,7 +3,8 @@ package braid.society.secret.braidtoolkit.api;
 /**
  * Interface for converting one object to another.
  * <p>
- * This can achieve when we want to convert each other between two concrete classes for example.
+ * This interface is intended to tell IDEs explicitly that a class can be converted to another class,
+ * which means that IDE's code completion can be used to find the convert method.
  * @param <T> The type of object to convert to.
  */
 public interface CompatibleWith<T> {
