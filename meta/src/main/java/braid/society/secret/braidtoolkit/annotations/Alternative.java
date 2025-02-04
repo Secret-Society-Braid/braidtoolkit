@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 public @interface Alternative {
 
   /**
-   * The name of the alternative element.
+   * @return The name of the alternative element.
    */
   String value();
 }

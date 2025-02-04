@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
 public @interface DeprecatedSince {
 
   /**
-   * The version since the element is marked as deprecated.
+   * @return The version since the element is marked as deprecated.
    */
   String value();
 }
