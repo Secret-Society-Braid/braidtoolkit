@@ -28,6 +28,7 @@ dependencies {
     testRuntimeOnly(libs.jupiter.engine)
 
     annotationProcessor(libs.bundles.annotations)
+    testAnnotationProcessor(libs.bundles.annotations)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
