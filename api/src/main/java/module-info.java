@@ -5,5 +5,4 @@ module braidtoolkit.api {
   exports braid.society.secret.braidtoolkit.versions;
   exports braid.society.secret.braidtoolkit.concurrent;
   exports braid.society.secret.braidtoolkit.api;
-  exports braid.society.secret.braidtoolkit.annotations;
 }

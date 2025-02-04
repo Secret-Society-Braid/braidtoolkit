@@ -13,6 +13,8 @@ plugins {
     jacoco
 }
 
+group = "org.braid.society.secret"
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
