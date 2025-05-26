@@ -13,3 +13,4 @@ plugins {
 rootProject.name = "braidtoolkit"
 include("api")
 include("meta")
+include("connection")
