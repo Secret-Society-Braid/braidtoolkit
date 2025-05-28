@@ -16,9 +16,13 @@ group = "org.braid.society.secret"
 
 dependencies {
   // Use JUnit Jupiter for testing.
+  implementation(libs.bundles.annotations)
+  implementation(libs.logback)
+
   testImplementation(libs.bundles.tests)
   testRuntimeOnly(libs.jupiter.engine)
 
+  annotationProcessor(libs.bundles.annotations)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
