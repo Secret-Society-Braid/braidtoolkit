@@ -74,6 +74,8 @@ public class RateLimit {
     this.tokenBucket = tokenBucket;
     this.requestCounter = requestCounter;
     this.taskExecutor = Executors.newFixedThreadPool(taskExecutorPoolSize);
+
+    this.scheduler.scheduleAtFixedRate(this::processDelayedQueue, 0, tokenBucket.getRefillPeriodMillis() / 2, TimeUnit.MILLISECONDS);
   }
 
   /**
@@ -223,7 +225,7 @@ public class RateLimit {
         // notify cancellation with completing exceptionally
         remainingWrapper.getFuture().completeExceptionally(
           new RejectedExecutionException("Task was cancelled due to RateLimit shutdown."));
-        log.error("Task in delayed queue was cancelled due to shutdown: {}", remainingWrapper.getTask().toString());
+        log.warn("Task in delayed queue was cancelled due to shutdown: {}", remainingWrapper.getTask().toString());
         cancelledCount++;
       }
     }
