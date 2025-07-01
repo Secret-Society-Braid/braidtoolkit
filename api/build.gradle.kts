@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.moduleplugin)
     alias(libs.plugins.shadow)
     jacoco
+		`maven-publish`
 }
 
 group = "org.braid.society.secret"
