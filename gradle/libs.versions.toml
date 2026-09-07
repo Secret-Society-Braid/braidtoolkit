@@ -16,5 +16,5 @@ annotations = [ "lombok", "jsr" ]
 
 [plugins]
 jlink = { id = "org.beryx.jlink", version = "3.1.1" }
-moduleplugin = { id = "org.javamodularity.moduleplugin", version = "1.8.15" }
+moduleplugin = { id = "org.javamodularity.moduleplugin", version = "2.0.1" }
 shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
